@@ -3,10 +3,14 @@ import { Inject } from '@angular/core';
 import { TodoService } from '../Services/TodoService';
 
 @Component({
-  selector : 'my-app',
-  template: `<h1>Injector Example</h1>
+  selector : 'inject-app',
+  template: `<br><hr><br>
+            <div class="alert-success">
+          This is done using @Inject() Example
+          <h1>Injector Example</h1>
               <input type="text" #myInput>
               <button (click)='clickMe(myInput.value)'>Click Me</button>
+        </div>
             `
 })
 

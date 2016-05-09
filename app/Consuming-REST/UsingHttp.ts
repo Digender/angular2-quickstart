@@ -3,11 +3,8 @@ import { Inject } from '@angular/core';
 import { TodoService } from '../Services/TodoService';
 
 @Component({
-  selector : 'ng-for-example',
-  template: `<br><hr><br>
-          <div class="alert-warning">
-            This is an Example of NgFor.
-              <h1>Enter value in textbox and Click Add/Press Enter</h1>
+  selector : 'my-app',
+  template: `<h1>Enter value in textbox and Click Add/Press Enter</h1>
               <form>
                <div class="form-group">
                 <input class="form-control" (keyup)="onEnter($event,myInput.value)" type="text" #myInput>
@@ -17,7 +14,6 @@ import { TodoService } from '../Services/TodoService';
               <ul>
                 <li style="list-style:none;" *ngFor="let todo of todoServ.todo;let i = index">Element {{i+1}}: {{todo}}</li>
               </ul>
-            </div>
             `
 })
 
